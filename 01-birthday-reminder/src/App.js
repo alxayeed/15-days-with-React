@@ -8,8 +8,8 @@ function App() {
   return (
     <main>
       <section className="container">
-        <h2>Birthday Reminder</h2>
-        <h3> {people.length} people have Birthday today</h3>
+        <h2 className="text-center">Birthday Reminder</h2>
+        <h5 className="text-center"> {people.length} people have Birthday today</h5>
         <List peoples={people} />
         <button onClick={() => setPeople([])}>Clear all</button>
 
