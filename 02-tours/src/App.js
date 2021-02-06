@@ -49,17 +49,23 @@ function App() {
     );
   }
 
+  if (tours.length === 0) {
+    return <main>
+      <div className="title">
+        <h2>No tours left</h2>
+        <div className="underline"></div>
+        <button onClick={() => fetchTours()} className="btn">Refresh</button>
+      </div>
+    </main>
+  }
+
   return (
     <div>
-
-
+      <h2 className="main-title">Tour Around the world</h2>
       <main>
-        <header className="title">
-          <h1>Tour Project</h1>
-          <MyContext.Provider value={removeTour}>
-            <Tours tours={tours} />
-          </MyContext.Provider>
-        </header>
+        <MyContext.Provider value={removeTour}>
+          <Tours tours={tours} />
+        </MyContext.Provider>
       </main>
     </div>
   );
