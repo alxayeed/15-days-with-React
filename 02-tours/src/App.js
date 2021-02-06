@@ -1,17 +1,46 @@
+import React, { useState, useEffect } from 'react'
 import Loading from "./Loading";
 import Tours from "./Tours";
-import React, { useState } from 'react'
+const url = 'https://course-api.com/react-tours-project'
 
 function App() {
-  const [loading, setLoading] = useState(true)
-  return (
-    <div className="">
-      <header className="">
-        <h1>Tour Project</h1>
+  const [loading, setLoading] = useState(false)
+  const [tours, setTour] = useState([])
+
+  const fetchTours = async () => {
+    setLoading(true);
+
+    try {
+      const response = await fetch(url);
+      const tours = await response.json();
+      setTour(tours)
+      setLoading(false)
+    } catch (error) {
+
+      console.log(`The error is: ${error}`);
+      setLoading(false)
+    }
+  }
+
+  useEffect(() => {
+    fetchTours()
+  }, [])
+
+  if (loading) {
+    return (
+      <main>
         <Loading />
-        <Tours />
+      </main>
+    );
+  }
+
+  return (
+    <main>
+      <header className="title">
+        <h1>Tour Project</h1>
+        <Tours tours={tours} />
       </header>
-    </div>
+    </main>
   );
 }
 
