@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { MyContext } from "./App"
+
+
 
 function Tour({ id, name, info, image, price }) {
     const [readMore, setReadMore] = useState(true)
+
+    const removeTour = useContext(MyContext)
+
     return (
         <article className="single-tour">
             <img src={image} alt={name} />
@@ -20,12 +26,9 @@ function Tour({ id, name, info, image, price }) {
                     </button>
                 </p>
 
-
-                <button className="delete-btn"> Not interested </button>
+                <button onClick={() => removeTour(id)} className="delete-btn" > Not interested </button>
             </footer>
-
-
-        </article>
+        </article >
     )
 }
 

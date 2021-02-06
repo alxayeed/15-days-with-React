@@ -3,9 +3,18 @@ import Loading from "./Loading";
 import Tours from "./Tours";
 const url = 'https://course-api.com/react-tours-project'
 
+export const MyContext = React.createContext()
+
+
+
+
+
+
 function App() {
   const [loading, setLoading] = useState(false)
   const [tours, setTour] = useState([])
+
+
 
   const fetchTours = async () => {
     setLoading(true);
@@ -26,6 +35,12 @@ function App() {
     fetchTours()
   }, [])
 
+  const removeTour = (id) => {
+    const newTours = tours.filter((tour) => (tour.id !== id));
+    setTour(newTours);
+    console.log(id)
+  }
+
   if (loading) {
     return (
       <main>
@@ -35,12 +50,18 @@ function App() {
   }
 
   return (
-    <main>
-      <header className="title">
-        <h1>Tour Project</h1>
-        <Tours tours={tours} />
-      </header>
-    </main>
+    <div>
+
+
+      <main>
+        <header className="title">
+          <h1>Tour Project</h1>
+          <MyContext.Provider value={removeTour}>
+            <Tours tours={tours} />
+          </MyContext.Provider>
+        </header>
+      </main>
+    </div>
   );
 }
 
