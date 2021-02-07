@@ -1,4 +1,5 @@
 import './App.css';
+import Review from './Review';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
             <h2>Our reviews</h2>
             <div className="underline"></div>
           </div>
+          <Review />
         </section>
       </main>
 

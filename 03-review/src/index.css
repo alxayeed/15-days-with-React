@@ -220,6 +220,7 @@ main {
 }
 .info {
   margin-bottom: 0.75rem;
+  text-align: justify;
 }
 .prev-btn,
 .next-btn {
