@@ -1,14 +1,18 @@
-import React from 'react'
-import { AiOutlinePlusCircle } from "react-icons/ai";
+import React, { useState } from 'react'
+import { AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
 
 function SingleQuestion(question) {
+    const [toggle, setToggle] = useState(false)
     return (
         <article className="question">
             <header>
                 <h4>{question.title}</h4>
-                <button className="btn"><AiOutlinePlusCircle /></button>
+                {toggle === true ?
+                    <button onClick={() => setToggle(!toggle)} className="btn"><AiOutlineMinusCircle /></button> :
+                    <button onClick={() => setToggle(!toggle)} className="btn"><AiOutlinePlusCircle /></button>
+                }
             </header>
-            <p>{question.info}</p>
+            {toggle === true ? <p>{question.info}</p> : null}
         </article>
     )
 }
