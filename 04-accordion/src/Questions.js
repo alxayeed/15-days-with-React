@@ -1,12 +1,15 @@
 import React from 'react'
-// import { AiOutlinePlusCircle } from "react-icons/ai";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 
-function SingleQuestion() {
+function SingleQuestion(question) {
     return (
-        <div>
-            {/* <AiOutlinePlusCircle /> */}
-            Question
-        </div>
+        <article className="question">
+            <header>
+                <h4>{question.title}</h4>
+                <button className="btn"><AiOutlinePlusCircle /></button>
+            </header>
+            <p>{question.info}</p>
+        </article>
     )
 }
 
