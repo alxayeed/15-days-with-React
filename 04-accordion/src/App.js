@@ -1,11 +1,12 @@
 
 import './App.css';
+import SingleQuestion from './Questions';
 
 function App() {
   return (
-    <div className="">
+    <div className="container">
       <header className="">
-        <h1>Hola</h1>
+        <SingleQuestion />
       </header>
     </div>
   );
