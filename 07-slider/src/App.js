@@ -9,7 +9,15 @@ function App() {
   const [index, setIndex] = useState(0)
 
 
-
+  useEffect(() => {
+    const lastIndex = people.length - 1
+    if (index < 0) {
+      setIndex(lastIndex)
+    }
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  })
   return (
     <section className="section">
       <div className="title">
@@ -38,10 +46,10 @@ function App() {
             <ImQuotesRight className="icon" />
           </article>
         })}
-        <button className="prev" onClick={() => setIndex(index === 0 ? people.length - 1 : index - 1)}>
+        <button className="prev" onClick={() => setIndex(index - 1)}>
           <BiChevronLeftCircle />
         </button>
-        <button className="next" onClick={() => setIndex(index === people.length - 1 ? 0 : index + 1)}>
+        <button className="next" onClick={() => setIndex(index + 1)}>
           <BiChevronRightCircle />
         </button>
       </div>
