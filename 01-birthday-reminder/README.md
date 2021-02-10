@@ -24,8 +24,8 @@
  </table>
 <hr /><br/> <br/>
 
-* ### Fetches people information from another file and show then in a card
- * ### Includes a button to clear the list
+*  Fetches people information from another file and show then in a card
+ * Includes a button to clear the list
 
 ```
 useState

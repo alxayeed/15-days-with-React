@@ -2,7 +2,7 @@
 ## 15 days with React 
 <br/> 
 
-### Project 01
+### Project 04
 <br/> 
 
 # Accordion
@@ -25,8 +25,8 @@
  </table>
 <hr /><br/> <br/>
 
-* ### Shows a list of question from a list of questions
- * ### Includes two buttons to toggle the answer on/ off
+*  Shows a list of question from a list of questions
+*  Includes two buttons to toggle the answer on/ off
 
 ```
 useState, react-icons, toggle on/off

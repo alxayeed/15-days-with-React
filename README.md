@@ -8,7 +8,7 @@
 ## 02. [Tours](https://tour-info.netlify.app/)
 ## 03. [Reviews](https://review-person.netlify.app/)
 ## 04. [Accordion](https://toggle-question.netlify.app)
-## 05. Menu
+## 05. [Menu](https://item-menu.netlify.app/)
 ## 06. Tabs
 ## 07. Slider
 ## 08. Lorem-Ipsum

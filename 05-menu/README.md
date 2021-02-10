@@ -40,7 +40,7 @@ useState, Set
 
 ## Demo
 
-## <a class href="item-menu.netlify.app" target="_blank" >See Live</a>
+## <a class href="https://item-menu.netlify.app/" target="_blank" >See Live</a>
 
 
 

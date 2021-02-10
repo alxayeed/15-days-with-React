@@ -14,8 +14,8 @@
 
 <hr /><br/> <br/>
 
-* ### Fetches People information and shows some info on a card
- * ### Next, Previous and Randomly choose a person
+*  Fetches People information and shows some info on a card
+*  Next, Previous and Randomly choose a person
 
 ```
 useState, react-icons

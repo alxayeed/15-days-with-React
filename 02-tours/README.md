@@ -22,11 +22,11 @@
  </table>
  <hr/>
 
- * ### Fetches Tour information and shows some info on a card
- * ### Toggle on/off on tour information
- * ### Animated loading icon
- * ### Remove a tour from list which you are not interested about
- * ### Refresh button when there is no tour left on list
+ *  Fetches Tour information and shows some info on a card
+ *  Toggle on/off on tour information
+ *  Animated loading icon
+ *  Remove a tour from list which you are not interested about
+ *  Refresh button when there is no tour left on list
 
 <hr /><br/> <br/>
 
