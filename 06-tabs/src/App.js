@@ -8,11 +8,11 @@ const url = 'https://course-api.com/react-tabs-project'
 function App() {
   const [loading, setLoading] = useState(true);
   const [jobs, setJobs] = useState([]);
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(1)
 
   const fetchJobs = async () => {
     const response = await fetch(url)
-    const newJobs = response.json()
+    const newJobs = await response.json()
     setJobs(newJobs);
     setLoading(false)
   }
@@ -20,8 +20,6 @@ function App() {
   useEffect(() => {
     fetchJobs();
   }, [])
-
-  console.log(jobs, loading)
 
   if (loading) {
     return (
@@ -33,13 +31,31 @@ function App() {
     )
   }
 
-  return (
-    <div className="">
-      <header className="">
-        <h1>Jobs</h1>
 
-      </header>
-    </div>
+  const { company, dates, duties, title } = jobs[value]
+
+  return (
+    <section className="section">
+      <div className="title">
+        <h2>experience</h2>
+        <div className="underline"></div>
+      </div>
+      <div className="job-center">
+        <article className="job-info">
+          <h3>{title}</h3>
+          <h4>{company}</h4>
+          <p className='job-date'>{dates}</p>
+          {duties.map((duty, index) => {
+            return (
+              <div key={index} className="job-desc">
+                <GiMoebiusTriangle className="job-icon"></GiMoebiusTriangle>
+                <p>{duty}</p>
+              </div>
+            )
+          })}
+        </article>
+      </div>
+    </section>
   );
 }
 
