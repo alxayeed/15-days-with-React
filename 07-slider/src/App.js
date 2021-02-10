@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import data from './Data'
 import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
+import { ImQuotesRight } from "react-icons/im";
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
             <h4>{name}</h4>
             <p className="title">{title}</p>
             <p className="text">{quote}</p>
-
+            <ImQuotesRight className="icon" />
           </article>
         })}
         <button className="prev">
