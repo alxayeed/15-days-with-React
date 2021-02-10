@@ -9,7 +9,7 @@
 ## 03. [Reviews](https://review-person.netlify.app/)
 ## 04. [Accordion](https://toggle-question.netlify.app)
 ## 05. [Menu](https://item-menu.netlify.app/)
-## 06. Tabs
+## 06. [Resume Tabs](https://resume-tabs.netlify.app)
 ## 07. Slider
 ## 08. Lorem-Ipsum
 ## 09. Color Generator
