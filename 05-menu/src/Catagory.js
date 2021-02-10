@@ -1,10 +1,15 @@
 import React from 'react'
 
-const Catagory = () => {
+const Catagory = ({ filterItems, allCatagories }) => {
+    console.log(allCatagories);
     return (
-        <div>
-            <h2>Catagory Component</h2>
-        </div>
+        <div className="btn-container" >
+            {allCatagories.map((catagory, index) => {
+                return <button className="filter-btn" key={index} onClick={() => filterItems(catagory)}>
+                    {catagory}
+                </button>
+            })}
+        </div >
     )
 }
 
