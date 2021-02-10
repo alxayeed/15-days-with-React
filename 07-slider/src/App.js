@@ -38,10 +38,10 @@ function App() {
             <ImQuotesRight className="icon" />
           </article>
         })}
-        <button className="prev" >
+        <button className="prev" onClick={() => setIndex(index - 1)}>
           <BiChevronLeftCircle />
         </button>
-        <button className="next" >
+        <button className="next" onClick={() => setIndex(index + 1)}>
           <BiChevronRightCircle />
         </button>
       </div>
