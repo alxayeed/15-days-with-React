@@ -11,15 +11,21 @@ function App() {
     e.preventDefault()
 
     let amount = parseInt(count)
-    console.log(amount)
+
     if (count <= 0) {
       amount = 1
+      setText(data.slice(0, amount))
     }
-    if (count > data.length) {
+    else if (count > data.length) {
       amount = data.length
+      let remainder = count - data.length
+      console.log(amount, remainder)
+      setText(data.slice(0, amount).concat(data.slice(0, remainder)))
+    }
+    else {
+      setText(data.slice(0, amount))
     }
 
-    setText(data.slice(0, amount))
   }
 
   return (
