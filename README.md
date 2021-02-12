@@ -11,7 +11,7 @@
 ## 05. [Menu](https://item-menu.netlify.app/)
 ## 06. [Resume Tabs](https://resume-tabs.netlify.app)
 ## 07. [Slider](https://review-slider.netlify.app)
-## 08. Lorem-Ipsum
+## 08. [Lorem-Ipsum](https://makelorem.netlify.app)
 ## 09. Color Generator
 ## 10. Grocery-Bud
 ## 11. Navbar
