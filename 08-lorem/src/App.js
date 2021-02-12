@@ -9,8 +9,17 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setText(data)
-    console.log(text)
+
+    let amount = parseInt(count)
+    console.log(amount)
+    if (count <= 0) {
+      amount = 1
+    }
+    if (count > data.length) {
+      amount = data.length
+    }
+
+    setText(data.slice(0, amount))
   }
 
   return (
@@ -27,7 +36,7 @@ function App() {
       </form>
       <article>
         {text.map((item, index) => {
-          return <p key="index">{item}</p>
+          return <p key={index}>{item}</p>
         })}
       </article>
     </section>
