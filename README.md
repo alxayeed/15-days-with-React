@@ -1,6 +1,7 @@
 # 15 days With React
-## 15 days, 15 projecs to speed-up react skills
+## 15 days, 15 projects to speed-up react skills
 ### Please navigate to different folders to see details of a project
+### Click on the name of a Project to see it live
 <br /> <br /> <br /> <br />
 
 # List of projects
